@@ -1,0 +1,203 @@
+$green: #1EE0AC;
+$white: #FFFFFF;
+$white2: #FAFAFA;
+$black: #39393C;
+$gray: #5f5f65;
+$red: #FF5151;
+$orange: #FD7913;
+$background: #2A2A2A;
+
+.header {
+  position: relative;
+  background-color: $background;
+  border-bottom: 0.0625rem solid $black;
+  z-index: 100;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.0625rem;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    position: relative;
+  }
+
+  &-controler {
+    display: flex;
+    align-items: center;
+    gap: 3.75rem;
+  }
+}
+
+.user {
+  &-content {
+    position: relative;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    &-avatar img {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+    &-name {
+      >* {
+        font-family: Fira Code;
+      }
+      h4 {
+        padding-bottom: 0.3125rem;
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: $white2;
+      }
+  
+      span {
+        font-size: 0.75rem;
+        display: block;
+        color: $green;
+      }
+    }
+  }
+}
+
+.language {
+  &-content {
+    position: relative;
+    &.open {
+      svg {
+        transform: rotateX(180deg);
+      }
+      .language-body {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    cursor: pointer;
+
+    img {
+      width: 2rem;
+      display: block;
+    }
+
+    svg {
+      transition: .4s;
+    }
+  }
+
+  &-body {
+    position: absolute;
+    top: 140%;
+    right: 0rem;
+    background-color: $black;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1.25rem);
+    transition: .4s;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 0.5rem;
+      border-radius: 0.3125rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #5f5f65;
+      }
+      &.active {
+        background-color: $gray;
+      }
+
+      img {
+        display: block;
+        width: 2rem;
+      }
+
+      span {
+        font-size: 0.75rem;
+        font-family: Fira Code;
+        color: $white2;
+        font-weight: 400;
+        letter-spacing: 0.0625rem;
+      }
+    }
+  }
+}
+
+.header-burger-menu {
+  width: 40px;
+  height: 35px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 2px solid #FAFAFA;
+  border-radius: 4px;
+  padding: 7px;
+  cursor: pointer;
+  &.active {
+    span:first-child {
+      transform: rotate(45deg) translate(2px, 3px);
+    }
+    span:nth-child(2) {
+      display: none;
+    }
+    span:last-child {
+      transform: rotate(-45deg) translate(2px, -3px);
+    }
+  }
+  span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: #FAFAFA;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__container {
+    padding: 0.5rem 1.25rem !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    &-logo svg {
+      width: 140px;
+    }
+    &-controler {
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .header-logo {
+    display: none;
+  }
+  .header__container {
+    .header-burger-menu.active {
+      span:first-child,
+      span:last-child {
+        transform: rotate(0) translate(0, 0);
+      }
+      span:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}

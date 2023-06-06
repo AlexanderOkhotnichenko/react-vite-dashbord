@@ -1,0 +1,39 @@
+$black: #212121;
+$gray: #A1A1A1;
+$grayhover: #706c6c;
+$shadow: rgba(0, 0, 0, 0.45);
+
+.description-panel-box {
+  padding: 1.25rem 2.5rem;
+  background-color: $black;
+}
+
+.controller {
+  &-wrapper {
+    display: flex;
+    gap: 0.625rem;
+    padding-bottom: 0.625rem
+  }
+
+  &-content {
+    font-family: Fira Code;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.1031rem;
+    text-transform: uppercase;
+    color: $gray;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-0.125rem);
+      color: $grayhover;
+    }
+  }
+}
+
+.button-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1rem;
+}

@@ -1,0 +1,18 @@
+.tooltip {
+  font-family: Fira Code;
+  border-radius: 0.25rem;
+  background: #26313c;
+  color: #fff;
+  padding: 1rem;
+  box-shadow: 15px 30px 40px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  outline: none;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+.rechart-wrapper .rechart-castesian-grid-horizontal line:first-child,
+.rechart-wrapper .rechart-castesian-grid-horizontal line:last-child {
+  stroke-opacity: 0;
+}

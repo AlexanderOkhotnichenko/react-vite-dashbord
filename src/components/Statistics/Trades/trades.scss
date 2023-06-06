@@ -1,0 +1,81 @@
+$black: #2A2A2A;
+$black2: #232323;
+$white: #FFFFFF;
+$gray: #9CA3AF;
+
+.trades {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.875rem;
+  &-content {
+    padding: 1.5rem;
+    background-color: $black;
+    &.grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+    &-left {
+      > * {
+        font-family: Fira Code;
+      }
+      &-title {
+        line-height: 2rem;
+        font-size: 1.375rem;
+        letter-spacing: -0.04rem;
+        color: $white;
+      }
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        font-size: 0.75rem;
+        color: $gray;
+        line-height: 1rem;
+        padding-bottom: 0.25rem;
+      }
+    }
+    &-right {
+      padding: 1.5rem;
+      background-color: $black2;
+      > * {
+        font-family: Fira Code;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .trades-content.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .trades-content.grid {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .trades-content-left-title {
+    font-size: 1.25rem;
+  }
+  .trades-content-right {
+    padding: 1rem;
+    &-box {
+      gap: 0.75rem;
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+      }
+      span, h4 {
+        font-size: 12px;
+      }
+      img {
+        width: 30px;
+      }
+      &-flex {
+        gap: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+$black: #232323;
+$black2: #39393B;
+$green: #34D399;
+$red: #EF4444;
+$gray: #A1A1A1;
+$white: #FAFAFA;
+
+.financials-card {
+  background-color: $black;
+  padding: 1.5rem;
+  border: 0.065rem solid $black2;
+  > * {
+    font-family: Fira Code;
+  }
+  &-title {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $gray;
+    line-height: 1.5rem;
+  }
+  &-info {
+    &.green {
+      color: $green;
+    }
+    &.red {
+      color: $red;
+    }
+    &.white {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .financials-grid.layout-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.563rem;
+  }
+}

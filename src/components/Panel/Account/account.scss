@@ -1,0 +1,100 @@
+$shadow: rgba(0, 0, 0, 0.45);
+$gray: #A1A1A1;
+$white: #FAFAFA;
+$red: #FF5151;
+$green: #1EE0AC;
+$orange: #FD7913;
+
+.account {
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &-label {
+    position: relative;
+    display: block;
+    width: 6.25rem;
+    height: 6.25rem;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: .4s;
+    }
+
+    &::before {
+      background-color: $shadow;
+      z-index: 1;
+      border-radius: 50%;
+      inset: 0 0 0 0;
+    }
+
+    &::after {
+      z-index: 2;
+      width: 2.5rem;
+      height: 2.5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../../assets/photo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-input {
+    display: none;
+  }
+
+  &-preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &-description {
+
+    &-title {
+      font-family: Fira Code;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: $gray;
+
+      &:not(:last-child) {
+        padding-bottom: 0.75rem;
+      }
+
+      .white {
+        color: $white;
+      }
+
+      .red {
+        color: $red;
+      }
+
+      .green {
+        color: $green;
+      }
+
+      .orange {
+        color: $orange;
+      }
+    }
+  }
+}

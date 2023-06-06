@@ -1,0 +1,61 @@
+$black: #2A2A2A;
+$black2: #39393B;
+$white: #FFFFFF;
+
+.financials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  &-content {
+    padding: 1.25rem 1.5rem;
+    background-color: $black;
+    border: 0.065rem solid $black2;
+    &-title {
+      font-family: Fira Code;
+      padding-bottom: 1.25rem;
+      font-size: 1.315rem;
+      line-height: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.04rem;
+      color: $white;
+    }
+  }
+  &-grid {
+    display: grid;
+    gap: 1.563rem;
+    &.layout-1 {
+      grid-template-columns: repeat(auto-fill, minmax(17rem, auto));
+    }
+    &.layout-2 {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .financials {
+    gap: 1rem;
+  }
+  .financials-content {
+    padding: 1rem;
+    &-title {
+      font-size: 1.25rem;
+      line-height: 22px;
+      padding-bottom: 0.75rem;
+    }
+  }
+  .financials-card {
+    padding: 1rem;
+    &-title {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    &-info {
+      font-size: 14px;
+    }
+  }
+  .financials-grid.layout-1 {
+    gap: 0.75rem;
+    grid-template-columns: none;
+  }
+}

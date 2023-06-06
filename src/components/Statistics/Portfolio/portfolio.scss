@@ -1,0 +1,13 @@
+.portfolio {
+  overflow-x: auto;
+}
+
+@media (max-width: 470px) {
+  .portfolio-table-tbody tr td {
+    padding: 0.5rem 0.5rem;
+    text-align: start;
+    &.padding {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}

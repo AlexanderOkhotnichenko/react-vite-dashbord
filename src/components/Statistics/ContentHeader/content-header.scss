@@ -1,0 +1,125 @@
+$white: #FAFAFA;
+$gray: #A1A1A1;
+$gray2: #39393C;
+$orange: #FD7913;
+
+.content-header {
+  border-bottom: 0.125rem solid $gray2;
+
+  >* {
+    font-family: Fira Code;
+  }
+
+  &-title {
+    color: $white;
+    font-weight: 400;
+    letter-spacing: -0.075rem;
+    font-size: 2.313rem;
+    padding-bottom: 0.938rem;
+    line-height: 2.75rem;
+  }
+
+  &-text {
+    font-size: 0.813rem;
+    color: $gray;
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &-controler {
+    position: relative;
+    width: fit-content;
+    padding: 1rem 0;
+
+    &-content {
+      display: flex;
+      gap: 1.875rem;
+
+      &.ac-0 {
+        +.content-header-controler-line {
+          left: 0;
+        }
+      }
+
+      &.ac-1 {
+        +.content-header-controler-line {
+          left: 6rem;
+        }
+      }
+
+      &.ac-2 {
+        +.content-header-controler-line {
+          left: 12.5rem;
+        }
+      }
+
+      &.ac-3 {
+        +.content-header-controler-line {
+          left: 18.5rem;
+        }
+      }
+
+      &-el {
+        font-family: Fira Code;
+        font-size: 0.813rem;
+        line-height: 1.5rem;
+        color: $gray;
+        transition: .4s;
+        cursor: pointer;
+
+        &.active {
+          color: $orange;
+        }
+      }
+    }
+
+    &-line {
+      position: absolute;
+      left: 0;
+      bottom: -0.125rem;
+      width: 4rem;
+      height: 0.188rem;
+      background-color: $orange;
+      transition: .4s;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .content-header {
+    &-text {
+      font-size: 12px;
+      padding-bottom: 12px;
+    }
+    &-title {
+      font-size: 1.25rem;
+      line-height: 22px;
+    }
+    &-controler {
+      padding: 0.75rem 0;
+      &-content {
+        gap: 0.75rem;
+        &.ac-1 {
+          +.content-header-controler-line {
+            left: 4.5rem;
+          }
+        }
+  
+        &.ac-2 {
+          +.content-header-controler-line {
+            left: 9.5rem;
+          }
+        }
+  
+        &.ac-3 {
+          +.content-header-controler-line {
+            left: 14rem;
+          }
+        }
+        &-el {
+          font-size: 12px;
+        } 
+      }
+    }
+  }
+}

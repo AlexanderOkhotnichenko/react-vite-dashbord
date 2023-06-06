@@ -1,0 +1,133 @@
+$gray: #A1A1A1;
+$white: #FFFFFF;
+$green: #34D399;
+$black: #2A2A2A;
+$black2: #39393B;
+$red: #EF4444;
+
+.portfolio-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  &-thead {
+    tr {
+      &:last-child td {
+        border: 0.065rem solid $black2;
+
+        &:not(:last-child) {
+          border-right: 0;
+          border-left: 0;
+        }
+
+        &:first-child {
+          border-top-left-radius: 0.25rem;
+          border-left: 0.065rem solid $black2;
+        }
+
+        &:last-child {
+          border-top-right-radius: 0.25rem;
+          border-right: 0.065rem solid $black2;
+          border-left: 0;
+        }
+      }
+
+      td {
+        font-family: Fira Code;
+        font-size: 0.75rem;
+        color: $gray;
+        line-height: 1rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+        padding: 0.875rem 1.5rem;
+
+        &.end {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &-tbody {
+    tr {
+      text-align: right;
+
+      &:last-child td {
+        &:first-child {
+          border-bottom-left-radius: 0.25rem;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 0.25rem;
+        }
+      }
+
+      td {
+        &:first-child {
+          border-left: 0.065rem solid $black2;
+        }
+
+        &:last-child {
+          border-right: 0.065rem solid $black2;
+        }
+
+        background-color: #2A2A2A;
+        border-bottom: 0.065rem solid $black2;
+        font-family: Fira Code;
+        line-height: 1.25rem;
+        font-size: 0.875rem;
+        color: $white;
+        padding: 1.625rem 1.5rem;
+
+        &.padding {
+          padding: 1rem 1.5rem;
+        }
+
+        &.green {
+          color: $green;
+        }
+
+        &.red {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.table-td {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &-text {
+    h5 {
+      color: $white;
+      font-family: Fira Code;
+      font-weight: 400;
+      line-height: 1.25rem;
+      text-transform: uppercase;
+      text-align: start;
+    }
+
+    span {
+      color: $gray;
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .portfolio-table-thead tr td {
+    padding: 0.5rem 0.5rem;
+    &.end {
+      text-align: center;
+     
+    }
+  }
+}

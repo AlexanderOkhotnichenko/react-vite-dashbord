@@ -1,0 +1,61 @@
+$gray: #A1A1A1;
+$black: #39393B;
+$black2: #2A2A2A;
+$green: #34D399;
+$red: #EF4444;
+$white: #FFFFFF;
+
+.overview {
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  &-thead {
+    border: 0.065rem solid $black;
+    tr {
+      text-align: center;
+      td {
+        font-family: Fira Code;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.04rem;
+        text-transform: uppercase;
+        color: $gray;
+        padding: 0.75rem 0.75rem;
+      }
+    }
+  }
+  &-tbody {
+    border: 0.065rem solid $black;
+    tr {
+      background-color: $black2;
+      text-align: center;
+      border-bottom: 0.065rem solid $black;
+      td {
+        font-family: Fira Code;
+        font-size: 0.875rem;
+        padding: 1rem 0.75rem;
+        line-height: 1.25rem;
+        color: $white;
+        &.red {
+          color: $red;
+        }
+        &.green {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .overview-thead tr td {
+    padding: 0.5rem 0.5rem;
+  }
+  .overview-tbody tr td {
+    padding: 0.5rem 0.5rem;
+  }
+  .content-card-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+  }
+}

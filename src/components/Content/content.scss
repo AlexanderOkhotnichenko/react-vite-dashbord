@@ -1,0 +1,15 @@
+.content-card-wrapper {
+  display: grid;
+  grid-gap: 1.875rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+}
+
+.content-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.content-table-wrapper {
+  overflow-x: auto;
+}
